@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Formulario de Registro - Marvel</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="envoltura">
+    <form id="formRegistro" class="tarjeta">
+      <h1>Crear cuenta</h1>
+
+      <div class="grupo">
+        <label for="nombre">Nombre</label>
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          placeholder="Tu nombre"
+          required
+          pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+"
+          title="Solo letras y espacios"
+        />
+      </div>
+
+      <div class="grupo">
+        <label for="correo">Correo</label>
+        <input
+          type="email"
+          id="correo"
+          name="correo"
+          placeholder="tucorreo@ejemplo.com"
+          required
+          title="Ingrese un correo válido (ej: usuario@dominio.com)"
+        />
+      </div>
+
+      <div class="grupo">
+        <label for="clave">Contraseña</label>
+        <input
+          type="password"
+          id="clave"
+          name="clave"
+          placeholder="Mínimo 8 caracteres"
+          required
+          minlength="8"
+          title="La contraseña debe tener al menos 8 caracteres"
+        />
+      </div>
+
+      <button type="submit" class="btn">Registrarme</button>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
